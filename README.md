@@ -1,15 +1,18 @@
-# [미션] Spring Boot JPA로 게시판 구현
+### 😎 프로젝트 소개 
+프로그래머스 데브코스 과정 수강 중 수행한 과제입니다. <br>
+일대다의 연관 관계를 가지는 회원과 게시글엔티티에 대한 API 를 구현하였습니다.
 
-## 미션 소개 😎
-Spring Boot JPA - Rest API를 강의를 듣고, 게시판 구현 미션을 수행해봅시다.
+### 👩‍💻 구체적인 요구 사항
+과제 [링크](https://ancient-citron-06b.notion.site/SpringBoot-Part4-7-632dd10678164daca96a5ea185a02b60) 입니다.
 
-## 이곳은 공개 Repo입니다.
-1. 여러분의 포트폴리오로 사용하셔도 됩니다.
-2. 때문에 이 repo를 fork한 뒤
-3. 여러분의 개인 Repo에 작업하며 
-4. 이 Repo에 PR을 보내어 멘토의 코드 리뷰와 피드백을 받으세요.
+### 🤔 신경 쓰고 고민 한 부분
 
-## Branch 명명 규칙
-1.  여러분 repo는 알아서 해주시고 😀(본인 레포니 main으로 하셔두 되져)
-2.  prgrms-be-devcourse/spring-board 레포로 PR시 branch는 본인 username을 적어주세요 :)  
-base repo : `여기repo` base : `username` ← head repo : `여러분repo` compare : `main`
+- 서비스가 아닌 도메인에 로직을 응집시키지 위해 노력하였습니다.
+
+
+- 테스트를 작성해였습니다.
+  - 테스트 코드의 가독성을 위해 테스트가 정말로 관심있어 하는 부분에 대한 검증만을 수행하기 위해 노력하였습니다.
+  - [링크](https://backtony.github.io/spring/2021-10-15-spring-test-3/) 를 참고하여 컨트롤러 테스트시 공통되는 부분을 추상화 하고 레스트 독스를 활용한 API 문서화의 가독성을 높였습니다.
+  
+
+- 인증을 구현하지 않고 게시글의 작성 및 수정 API 를 말이 되게 구현하기 위해 http 인증 헤더에 로그인 아이디를 포함 하는 방식을 채택하였습니다. 
