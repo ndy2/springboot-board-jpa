@@ -20,6 +20,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
 import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;
+import static org.springframework.restdocs.payload.JsonFieldType.*;
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -75,11 +76,11 @@ class PostRestControllerTest extends RestDocsTestSupport {
                                         parameterWithName("sort").description("정렬 기준 (fieldName),(ASC|DESC), default : writtenDateTime,DESC")
                                 ),
                                 responseFields(
-                                        fieldWithPath("[].postId").type(JsonFieldType.NUMBER).description("게시글 아이디"),
-                                        fieldWithPath("[].title").type(JsonFieldType.STRING).description("게시글 제목"),
-                                        fieldWithPath("[].content").type(JsonFieldType.STRING).description("게시글 내용"),
-                                        fieldWithPath("[].writer").type(JsonFieldType.STRING).description("작성자 이름"),
-                                        fieldWithPath("[].writtenDateTime").type(JsonFieldType.STRING).description("작성 일시")
+                                        fieldWithPath("[].postId").type(NUMBER).description("게시글 아이디"),
+                                        fieldWithPath("[].title").type(STRING).description("게시글 제목"),
+                                        fieldWithPath("[].content").type(STRING).description("게시글 내용"),
+                                        fieldWithPath("[].writer").type(STRING).description("작성자 이름"),
+                                        fieldWithPath("[].writtenDateTime").type(STRING).description("작성 일시")
                                 )
                         )
                 );
@@ -105,11 +106,11 @@ class PostRestControllerTest extends RestDocsTestSupport {
                                         parameterWithName("postId").description("게시글 아이디")
                                 ),
                                 responseFields(
-                                        fieldWithPath("postId").type(JsonFieldType.NUMBER).description("게시글 아이디"),
-                                        fieldWithPath("title").type(JsonFieldType.STRING).description("게시글 제목"),
-                                        fieldWithPath("content").type(JsonFieldType.STRING).description("게시글 내용"),
-                                        fieldWithPath("writer").type(JsonFieldType.STRING).description("작성자 이름"),
-                                        fieldWithPath("writtenDateTime").type(JsonFieldType.STRING).description("작성 일시")
+                                        fieldWithPath("postId").type(NUMBER).description("게시글 아이디"),
+                                        fieldWithPath("title").type(STRING).description("게시글 제목"),
+                                        fieldWithPath("content").type(STRING).description("게시글 내용"),
+                                        fieldWithPath("writer").type(STRING).description("작성자 이름"),
+                                        fieldWithPath("writtenDateTime").type(STRING).description("작성 일시")
                                 )
                         )
                 );
@@ -138,14 +139,14 @@ class PostRestControllerTest extends RestDocsTestSupport {
                                         headerWithName(AUTHORIZATION).description("인증 대체 - 로그인 아이디를 포함해주세요")
                                 ),
                                 requestFields(
-                                        fieldWithPath("title").type(JsonFieldType.STRING).description("게시글 제목"),
-                                        fieldWithPath("content").type(JsonFieldType.STRING).description("게시글 내용")
+                                        fieldWithPath("title").type(STRING).description("게시글 제목"),
+                                        fieldWithPath("content").type(STRING).description("게시글 내용")
                                 ), responseFields(
-                                        fieldWithPath("postId").type(JsonFieldType.NUMBER).description("게시글 아이디"),
-                                        fieldWithPath("title").type(JsonFieldType.STRING).description("게시글 제목"),
-                                        fieldWithPath("content").type(JsonFieldType.STRING).description("게시글 내용"),
-                                        fieldWithPath("writer").type(JsonFieldType.STRING).description("작성자 이름"),
-                                        fieldWithPath("writtenDateTime").type(JsonFieldType.STRING).description("작성 일시")
+                                        fieldWithPath("postId").type(NUMBER).description("게시글 아이디"),
+                                        fieldWithPath("title").type(STRING).description("게시글 제목"),
+                                        fieldWithPath("content").type(STRING).description("게시글 내용"),
+                                        fieldWithPath("writer").type(STRING).description("작성자 이름"),
+                                        fieldWithPath("writtenDateTime").type(STRING).description("작성 일시")
                                 )
                         )
                 );
@@ -175,14 +176,14 @@ class PostRestControllerTest extends RestDocsTestSupport {
                                         headerWithName(AUTHORIZATION).description("인증 대체 - 로그인 아이디를 포함해주세요")
                                 ),
                                 requestFields(
-                                        fieldWithPath("title").type(JsonFieldType.STRING).description("게시글 수정 제목"),
-                                        fieldWithPath("content").type(JsonFieldType.STRING).description("게시글 수정 내용")
+                                        fieldWithPath("title").type(STRING).description("게시글 수정 제목"),
+                                        fieldWithPath("content").type(STRING).description("게시글 수정 내용")
                                 ), responseFields(
-                                        fieldWithPath("postId").type(JsonFieldType.NUMBER).description("게시글 아이디"),
-                                        fieldWithPath("title").type(JsonFieldType.STRING).description("게시글 수정 제목"),
-                                        fieldWithPath("content").type(JsonFieldType.STRING).description("게시글 수정 내용"),
-                                        fieldWithPath("writer").type(JsonFieldType.STRING).description("작성자 이름"),
-                                        fieldWithPath("writtenDateTime").type(JsonFieldType.STRING).description("작성 일시")
+                                        fieldWithPath("postId").type(NUMBER).description("게시글 아이디"),
+                                        fieldWithPath("title").type(STRING).description("게시글 수정 제목"),
+                                        fieldWithPath("content").type(STRING).description("게시글 수정 내용"),
+                                        fieldWithPath("writer").type(STRING).description("작성자 이름"),
+                                        fieldWithPath("writtenDateTime").type(STRING).description("작성 일시")
                                 )
                         )
                 );
